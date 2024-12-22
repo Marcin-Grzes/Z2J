@@ -1,1 +1,1 @@
-console.log("Hello wolves 🙂");
+console.log("Hello Bad Werewolf 🙂");
