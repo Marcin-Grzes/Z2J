@@ -1,6 +1,7 @@
 :root {
     --frame-color: burlywood;
     --border-color: tomato;
+    --background_color: green;
 }
 
 * {
@@ -10,7 +11,7 @@
 }
 
 body {
-    background-color: green;
+    background-color: var(--background_color);
 }
 
 .box {
