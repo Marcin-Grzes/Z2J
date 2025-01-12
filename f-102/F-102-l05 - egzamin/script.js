@@ -3,12 +3,10 @@ let firstNumber = parseFloat(prompt('Podaj pierwszą liczbę'));
 let operation = prompt('Podaj operator arytmetyczny (+, -, *, / lub %)');
 let secondNumber = parseFloat(prompt('Podaj drugą liczbę'));
 let result = 0
-let status = true
 
 const add = (firstNumber, secondNumber) => {
     return firstNumber + secondNumber
 }
-
 
 const subtraction = (firstNumber, secondNumber) => {
     return firstNumber - secondNumber
@@ -28,7 +26,7 @@ const divide = (firstNumber, secondNumber) => {
 
 const modulo = (firstNumber, secondNumber) => {
     if (firstNumber === 0 || secondNumber === 0) {
-        alert('Nie szukamy reszty dzielenia przez zero!')
+        return alert('Nie szukamy reszty dzielenia przez zero!')
     } else {
         return firstNumber % secondNumber
     }
@@ -36,7 +34,8 @@ const modulo = (firstNumber, secondNumber) => {
 
 const calcFisrt = (firstNumber, operation, secondNumber) => {
     if (isNaN(firstNumber && secondNumber)) {
-        alert('To nie jest liczba!')}
+        alert('To nie jest liczba!')
+    }
 
     switch (operation) {
         case '+':
@@ -56,7 +55,8 @@ const calcFisrt = (firstNumber, operation, secondNumber) => {
             break
         default:
             break
-    } return result
+    }
+    return result
 }
 
 alert(calcFisrt(firstNumber, operation, secondNumber))
