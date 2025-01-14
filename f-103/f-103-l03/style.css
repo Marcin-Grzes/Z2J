@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    counter-reset: counter;
+}
+
+.container {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 600px;
+    height: 200px;
+}
+
+.btn {
+    font-size: 20px;
+    width: 150px;
+    height: 75px;
+    cursor: pointer;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    counter-increment: counter
+}
+
+.row-1::before {
+    content: counter(counter) ". ";
+}
+
+.row-2::before {
+    content: counter(counter, upper-roman) ") ";
+}
+
+.row-3::before {
+    content: "[" counter(counter, decimal-leading-zero) "] ";
+}
+.container :nth-child(4) {
+    background-color: orange;
+}
+
+.container :last-child {
+    background-color: green;
+    color: white;
+}
+
+.btn:not(:nth-of-type(4), :last-of-type):hover {
+    background-color: darkgray;
+    color: white;
+}
+
+.btn:nth-of-type(4):hover {
+    background-color: green;
+    color: white;
+}
+.btn:last-of-type:hover {
+    background-color: royalblue;
+    color: black;
+}
+.btn:active {
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+}
