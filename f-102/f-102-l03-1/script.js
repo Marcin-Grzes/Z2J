@@ -11,10 +11,22 @@ if(confirm('Czy chcesz zostać junior frontend developerem?')){
         case '3':
             alert('Powoli do przodu')
             break
-        case '4'&& '5' && '6' && '7':
+        case '4':
             alert('Całkiem nieźle')
             break
-        case '8' && '9':
+        case '5':
+            alert('Całkiem nieźle')
+            break
+        case '6':
+            alert('Całkiem nieźle')
+            break
+        case '7':
+            alert('Całkiem nieźle')
+            break
+        case '8':
+            alert('Lecisz jak burza!')
+            break
+        case '9':
             alert('Lecisz jak burza!')
             break
         default:
