@@ -1,4 +1,3 @@
-
 if(confirm('Czy chcesz zostać junior frontend developerem?')){
     alert('Ucz się regularnie')
     switch(prompt('Ile godzin tygodniowo poświęcasz na naukę?')){

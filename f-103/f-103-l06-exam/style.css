@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background: #000;
+}
+
+.container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 400px;
+    height: 400px;
+    gap: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+h1 {
+    margin: 10px;
+    display: flex;
+    color: gold;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    background-color: burlywood;
+    font-weight: bold;
+    font-size: 75px;
+}
