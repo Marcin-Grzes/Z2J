@@ -35,4 +35,14 @@ h1 {
     background-color: burlywood;
     font-weight: bold;
     font-size: 75px;
+    cursor: pointer;
 }
+
+.x {
+    background-color: royalblue;
+}
+
+.o {
+    background-color: tomato;
+}
+
