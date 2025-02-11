@@ -24,25 +24,65 @@ body {
 
 }
 h1 {
-    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     color: gold;
     font-size: 50px;
     justify-content: center;
     align-items: center;
 }
+
+p {
+    position: relative;
+    margin: 40px;
+    font-size: 40px;
+    display: flex;
+    color: greenyellow;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn {
-    background-color: burlywood;
+    background-color: silver;
     font-weight: bold;
     font-size: 75px;
     cursor: pointer;
 }
-
-.x {
-    background-color: royalblue;
+.btn:active {
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.5);
+    transform: translateY(6px);
 }
 
-.o {
-    background-color: tomato;
+.btn:hover {
+    background-color: goldenrod;
 }
 
+.X {
+    background-color: darkblue;
+    border: 2px solid aqua;
+}
+
+.O {
+    background-color: darkred;
+    border: 2px solid red;
+}
+
+.reset-button {
+
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.reset-button:hover {
+    background-color: goldenrod;
+}
