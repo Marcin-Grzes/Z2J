@@ -1,7 +1,12 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,31 +16,31 @@ body {
 }
 
 .container {
-    position: absolute;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     width: 400px;
     height: 400px;
     gap: 20px;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 
 }
 h1 {
+    position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     color: gold;
-    font-size: 50px;
+    font-size: 5rem;
     justify-content: center;
     align-items: center;
 }
 
 p {
     position: relative;
-    margin: 40px;
     font-size: 40px;
     display: flex;
     color: greenyellow;
@@ -69,18 +74,19 @@ p {
 }
 
 .reset-button {
-
     position: absolute;
-    bottom: 60px;
+    margin: 20px;
+    top: 80%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-size: 20px;
     background-color: gold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     display: none;
+
 }
 
 .reset-button:hover {

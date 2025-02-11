@@ -1,6 +1,8 @@
 // Pobrać wszystkie przyciski z HTML
 const buttons = document.querySelectorAll('.btn');
 const messages = document.querySelector('p');
+const section = document.querySelector("section");
+
 // Konwersja NodeList przycisków na tablicę dla łatwiejszej manipulacji
 const buttonsArray = Array.from(buttons);
 
@@ -141,11 +143,12 @@ const checkGameStatus = function () {
 const resetButton = document.createElement('button');
 resetButton.textContent = 'Restartuj grę';
 resetButton.classList.add('reset-button');
+// section.insertBefore(resetButton, section.firstChild);
 document.body.appendChild(resetButton);
 
 // Funkcja pokazująca przycisk reset
 const showRestartButton = () => {
-    resetButton.style.display = 'block';
+    resetButton.style.display = 'flex';
 }
 
 
