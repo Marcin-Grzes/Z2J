@@ -148,7 +148,7 @@ document.body.appendChild(resetButton);
 
 // Funkcja pokazująca przycisk reset
 const showRestartButton = () => {
-    resetButton.style.display = 'flex';
+    resetButton.style.display = 'block';
 }
 
 
