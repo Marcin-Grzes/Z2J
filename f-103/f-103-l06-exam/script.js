@@ -1,4 +1,4 @@
-// Trzeba bobrać wszystkie przyciski z HTML
+// Trzeba pobrać wszystkie przyciski z HTML
 const buttons = document.querySelectorAll('.btn');
 
 // Pobieranie 'p' aby móc wstawić tekst z wiadomością kto wygrał
@@ -71,13 +71,13 @@ const PlayerMove = function (index) {
 const ComputerMove = function () {
 
     // Sprawdzenie, jakie są wolne pola na planszy
-    // map mapuje pola i wolne pola są jako indeksy tych pul, a zajęte jako null
-    // filter - odfiltrowuje null z tablicy, w efekcie zostaje tablica z indeksami wolnych pól
+    // map mapuje pola i wolne pola są jako indeksy tych pól, a zajęte jako null
+    // filter - odfiltrowuje null z tablicy, w efekcie zostaje tablica z indeksami wolnych pól,
     let availableMoves = board
         .map((cell, i) => cell === '' ? i : null)
         .filter(i => i !== null);
 
-    // If sprawdza, czy są wolne pola, czy to nie jest tura gracza i gra nie jest zakończona
+    // If sprawdza, czy są wolne pola, czy to nie jest tura gracza i gra nie jest zakończona,
     // Metoda random losuje cyfrę (index) z tablicy indexów wolnych pól.
     // Umieszczenie symbolu 'O' w miejsce wylosowanego indexy na tablicy board oraz w HTML.
     if (availableMoves.length > 0 && !isPlayerTurn && !isGameOver){
@@ -107,7 +107,7 @@ const checkWin = function (symbol) {
     })
 }
 
-// Funkcja sprawdzająca czy nastąpił remis
+// Funkcja sprawdzająca, czy nastąpił remis
 const checkDraw = function () {
     return board.every(cell => cell !== '');
 }
