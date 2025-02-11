@@ -114,7 +114,6 @@ const checkGameStatus = function () {
     if(checkWin(PLAYER_SYMBOL)) {
         isGameOver = true;
         setTimeout(() => {
-            alert('Wygrałeś!');
             messages.innerText = 'Wygrał użytkownik';
             showRestartButton();
         },100);
@@ -123,7 +122,6 @@ const checkGameStatus = function () {
     if (checkWin(COMPUTER_SYMBOL)) {
         isGameOver = true;
         setTimeout(() => {
-            alert('Komputer wygrał!');
             messages.textContent = 'Wygrał matrix';
             showRestartButton();
         },100);
@@ -131,7 +129,6 @@ const checkGameStatus = function () {
     if (checkDraw()) {
         isGameOver = true;
         setTimeout(() => {
-            alert('Remis!');
             messages.textContent = 'Remis';
             showRestartButton();
         }, 100);
