@@ -1,7 +1,8 @@
-// Pobrać wszystkie przyciski z HTML
+// Trzeba bobrać wszystkie przyciski z HTML
 const buttons = document.querySelectorAll('.btn');
+
+// Pobieranie 'p' aby móc wstawić tekst z wiadomością kto wygrał
 const messages = document.querySelector('p');
-const section = document.querySelector("section");
 
 // Konwersja NodeList przycisków na tablicę dla łatwiejszej manipulacji
 const buttonsArray = Array.from(buttons);
@@ -38,7 +39,7 @@ const WINNING_COMBINATIONS = [
 
 
 // Nasłuchiwanie na kliknięcie użytkownika. Przy kliknięciu jest wywoływana
-// funkcja obsługująca to, co się dzieje przez kliknięcie (handlePlayerMove).
+// funkcja obsługująca to, co się dzieje przez kliknięcie (PlayerMove).
 buttonsArray.forEach((button, index) => {
     button.addEventListener('click', () => {
     if(board[index] === '' && isPlayerTurn && !isGameOver)
@@ -59,6 +60,7 @@ const PlayerMove = function (index) {
     //Koniec tury gracza, zmiana na turę komputera.
     isPlayerTurn = false;
 
+    // Jeśli gra trwa, to kolejny będzie ruch komputera.
     // Opóźnienie wywołanie ruchu komputera
     if (!checkGameStatus()) {
         setTimeout(ComputerMove, 500);
@@ -75,9 +77,9 @@ const ComputerMove = function () {
         .map((cell, i) => cell === '' ? i : null)
         .filter(i => i !== null);
 
-    // If sprawdza czy są wolne pola, czy to nie jest tura gracza i gra nie jest zakończona
+    // If sprawdza, czy są wolne pola, czy to nie jest tura gracza i gra nie jest zakończona
     // Metoda random losuje cyfrę (index) z tablicy indexów wolnych pól.
-    // Umieszenie symbolu 'O' w miejsce wylosowanego indexy na tablicy board oraz w HTML.
+    // Umieszczenie symbolu 'O' w miejsce wylosowanego indexy na tablicy board oraz w HTML.
     if (availableMoves.length > 0 && !isPlayerTurn && !isGameOver){
         let randomIndex = availableMoves[Math
             .floor(Math
@@ -143,7 +145,6 @@ const checkGameStatus = function () {
 const resetButton = document.createElement('button');
 resetButton.textContent = 'Restartuj grę';
 resetButton.classList.add('reset-button');
-// section.insertBefore(resetButton, section.firstChild);
 document.body.appendChild(resetButton);
 
 // Funkcja pokazująca przycisk reset
