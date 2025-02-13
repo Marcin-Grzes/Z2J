@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.picture {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.container {
+    font-size: 0;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 600px;
+    height: 100px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.container a img {
+    border: 2px solid limegreen;
+    object-fit: cover;
+    width: 200px;
+    height: 100px;
+    transition: transform 1s;
+}
+
+.container a img:active {
+    transform: scale(1.4);
+}
+
+@media (max-width: 768px) {
+    .container {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 0 20px 20px limegreen;
+    }
+}
