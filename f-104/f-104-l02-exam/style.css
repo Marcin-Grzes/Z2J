@@ -9,34 +9,31 @@ html {
 }
 
 .picture {
-    position: relative;
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0;
 }
 
 .container {
-    font-size: 0;
-    position: fixed;
+    font-size: 0; /* w celu usunięcia odstępów pomiędzy linkami */
+    position: fixed; /*element pozostaje na swoim miejscu nawet podczas przewijania strony*/
     bottom: 50px;
     right: 50px;
     width: 600px;
     height: 100px;
-    overflow-x: scroll;
-    white-space: nowrap;
+    overflow-x: scroll; /*wymusza poziomy pasek przewijania*/
+    white-space: nowrap; /*zapobiega łamaniu linii i wymusza wyświetlanie elementów w jednym rzędzie poziomym*/
 }
 
 .container a img {
     border: 2px solid limegreen;
-    object-fit: cover;
     width: 200px;
     height: 100px;
-    transition: transform 1s;
+    transition: transform 0.3s;
 }
 
-.container a img:active {
-    transform: scale(1.4);
+.container a img:hover {
+    transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
